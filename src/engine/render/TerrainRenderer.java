@@ -1,7 +1,5 @@
 package engine.render;
 
-import engine.entities.Entity;
-import engine.model.TexturedModel;
 import engine.shaders.terrain.TerrainShader;
 import engine.terrain.Terrain;
 import engine.tools.Maths;
@@ -14,7 +12,7 @@ import org.lwjgl.util.vector.Vector3f;
 
 import java.util.List;
 
-import static engine.Ref.*;
+import static underground.Ref.*;
 
 public class TerrainRenderer {
 

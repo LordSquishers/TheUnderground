@@ -11,8 +11,6 @@ import engine.model.loader.OBJFileLoader;
 import engine.terrain.Terrain;
 import org.lwjgl.util.vector.Vector3f;
 
-import static engine.Ref.*;
-
 public class ObjectCreator {
 
     private static Loader loader;

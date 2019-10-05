@@ -5,7 +5,7 @@ import engine.shaders.uniform.Uniform1F;
 import engine.shaders.uniform.Uniform3F;
 import engine.shaders.uniform.Uniform4F;
 
-import static engine.Ref.*;
+import static underground.Ref.*;
 
 public class TerrainShader extends ShaderProgram {
 

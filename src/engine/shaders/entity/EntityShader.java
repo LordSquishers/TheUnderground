@@ -1,11 +1,10 @@
 package engine.shaders.entity;
 
-import static engine.Ref.*;
+import static underground.Ref.*;
 import engine.shaders.ShaderProgram;
 import engine.shaders.uniform.Uniform1F;
 import engine.shaders.uniform.Uniform3F;
 import engine.shaders.uniform.Uniform4F;
-import org.lwjgl.util.vector.Vector3f;
 
 public class EntityShader extends ShaderProgram {
 

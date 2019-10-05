@@ -1,4 +1,4 @@
-package engine;
+package underground;
 
 public class Ref {
 
@@ -27,9 +27,9 @@ public class Ref {
     // Shaders
     public static final int VERTEX_FILE = 0;
     public static final int FRAGMENT_FILE = 1;
-    public static final String SHADER_LOC = "src/engine/shaders/";
-    public static final String VERTEX_EXT = "VS.glsl";
-    public static final String FRAGMENT_EXT = "FS.glsl";
+    private static final String SHADER_LOC = "src/engine/shaders/";
+    private static final String VERTEX_EXT = "VS.glsl";
+    private static final String FRAGMENT_EXT = "FS.glsl";
 
     public enum ShaderType {
         ENTITY("entity"), TERRAIN("terrain");

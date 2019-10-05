@@ -1,10 +1,9 @@
 package engine.entities;
 
-import org.lwjgl.input.Keyboard;
 import org.lwjgl.util.vector.Vector3f;
 
 import static org.lwjgl.input.Keyboard.*;
-import static engine.Ref.*;
+import static underground.Ref.*;
 
 public class Camera {
 

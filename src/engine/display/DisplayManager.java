@@ -1,6 +1,6 @@
 package engine.display;
 
-import engine.Ref;
+import underground.Ref;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.*;
 
@@ -14,7 +14,7 @@ public class DisplayManager {
         try {
             Display.setDisplayMode(new DisplayMode(Ref.WINDOW_WIDTH, Ref.WINDOW_HEIGHT));
             Display.create(new PixelFormat(), attribs);
-            Display.setTitle("Our First Display!");
+            Display.setTitle(Ref.WINDOW_TITLE);
         } catch (LWJGLException e) {
             e.printStackTrace();
         }
