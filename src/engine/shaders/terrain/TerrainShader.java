@@ -14,7 +14,7 @@ public class TerrainShader extends ShaderProgram {
     public Uniform1F ambienceLevel, reflectivity, shineDamper;
 
     public TerrainShader() {
-        super(createShaderPath(ShaderType.TERRAIN, VERTEX_FILE), createShaderPath(ShaderType.TERRAIN, FRAGMENT_FILE));
+        super(createShaderPath(ShaderType.TERRAIN, VERTEX_FILE, ENGINE_LOC), createShaderPath(ShaderType.TERRAIN, FRAGMENT_FILE, ENGINE_LOC));
     }
 
     @Override

@@ -27,21 +27,27 @@ public class Ref {
     // Shaders
     public static final int VERTEX_FILE = 0;
     public static final int FRAGMENT_FILE = 1;
-    private static final String SHADER_LOC = "src/engine/shaders/";
+    public static final int GEOMETRY_FILE = 2;
+
+    public static final int ENGINE_LOC = 1;
+    public static final int GAME_LOC = 2;
+
     private static final String VERTEX_EXT = "VS.glsl";
     private static final String FRAGMENT_EXT = "FS.glsl";
+    private static final String GEOMETRY_EXT = "GS.glsl";
 
     public enum ShaderType {
-        ENTITY("entity"), TERRAIN("terrain");
+        ENTITY("entity"), TERRAIN("terrain"), BLOCK("block");
 
         private String name;
         ShaderType(String n) { this.name = n; }
         String getName() { return name; }
     }
 
-    public static String createShaderPath(ShaderType type, int shader) {
-        if(shader == VERTEX_FILE) return SHADER_LOC + type.getName() + "/" + type.getName() + VERTEX_EXT;
-        if(shader == FRAGMENT_FILE) return SHADER_LOC + type.getName() + "/" + type.getName() + FRAGMENT_EXT;
+    public static String createShaderPath(ShaderType type, int shader, int dir) {
+        if(shader == VERTEX_FILE) return "src/" +  (dir == 1 ? "engine" : "underground") + "/shaders/" + type.getName() + "/" + type.getName() + VERTEX_EXT;
+        if(shader == FRAGMENT_FILE) return "src/" +  (dir == 1 ? "engine" : "underground") + "/shaders/" + type.getName() + "/" + type.getName() + FRAGMENT_EXT;
+        if(shader == GEOMETRY_FILE) return "src/" +  (dir == 1 ? "engine" : "underground") + "/shaders/" + type.getName() + "/" + type.getName() + GEOMETRY_EXT;
 
         return null;
     }

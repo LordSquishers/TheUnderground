@@ -80,9 +80,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test x64">
+    <configuration name="Test x64" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="underground.TestLoop" />
+      <module name="TheUnderground" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=lib/natives/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Windows x64" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="11.0.4" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11.0.3" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="underground.GameLoop" />
       <module name="TheUnderground" />
@@ -113,6 +121,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Windows x64" />
+      <item itemvalue="Application.Test x64" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />

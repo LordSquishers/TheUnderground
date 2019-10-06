@@ -1,6 +1,5 @@
 package engine.shaders.uniform;
 
-import engine.tools.Maths;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;

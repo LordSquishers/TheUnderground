@@ -13,7 +13,7 @@ public class EntityShader extends ShaderProgram {
     public Uniform1F ambienceLevel, reflectivity, shineDamper, useFakeLighting;
 
     public EntityShader() {
-        super(createShaderPath(ShaderType.ENTITY, VERTEX_FILE), createShaderPath(ShaderType.ENTITY, FRAGMENT_FILE));
+        super(createShaderPath(ShaderType.ENTITY, VERTEX_FILE, ENGINE_LOC), createShaderPath(ShaderType.ENTITY, FRAGMENT_FILE, ENGINE_LOC));
     }
 
     @Override

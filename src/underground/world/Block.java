@@ -1,16 +1,49 @@
 package underground.world;
 
 import engine.model.ModelTexture;
+import engine.model.RawModel;
 import org.lwjgl.util.vector.Vector3f;
 
 public class Block {
 
-    private Vector3f position;
+    private Vector3f position, rotation;
+    private float scale;
+
+    private RawModel model;
     private ModelTexture[] textures;
     private boolean[] sides;
 
     private boolean isMultiTextured;
     private boolean isEnabled;
+
+    public Block(RawModel model, ModelTexture[] textures, Vector3f position) {
+        this.position = position;
+        this.model = model;
+        this.textures = textures;
+
+        this.rotation = new Vector3f(0, 0, 0);
+        this.scale = 1.0f;
+    }
+
+    public Vector3f getRotation() {
+        return rotation;
+    }
+
+    public void setRotation(Vector3f rotation) {
+        this.rotation = rotation;
+    }
+
+    public float getScale() {
+        return scale;
+    }
+
+    public void setScale(float scale) {
+        this.scale = scale;
+    }
+
+    public RawModel getModel() {
+        return model;
+    }
 
     public Vector3f getPosition() {
         return position;
