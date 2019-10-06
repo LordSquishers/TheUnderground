@@ -2,35 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="added structure for block world">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/underground/world/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/underground/world/Chunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/underground/world/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheUnderground.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TheUnderground.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/META-INF/TheUnderground.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref$ResourceExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref$ResourceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref$ShaderType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/display/DisplayManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/display/DisplayManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/entities/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/entities/Camera.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/Loader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/OBJFileLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/OBJFileLoader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/EntityRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/EntityRenderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/MasterRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/MasterRenderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/TerrainRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/TerrainRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/ShaderProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/ShaderProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/uniform/UniformBoolean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/uniform/UniformBoolean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/entity/EntityShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/entity/EntityShader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/TerrainShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/TerrainShader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/terrain/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/terrain/Terrain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/GameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/GameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/Ref.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/Ref.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/display/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/display/DisplayManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/entities/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/entities/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/model/loader/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/model/loader/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/model/loader/OBJFileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/model/loader/OBJFileLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/render/EntityRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/render/EntityRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/render/MasterRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/render/MasterRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/render/TerrainRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/render/TerrainRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/shaders/entity/EntityShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/shaders/entity/EntityShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/shaders/terrain/TerrainShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/shaders/terrain/TerrainShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/terrain/Terrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/terrain/Terrain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/tools/ObjectCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/tools/ObjectCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/tools/ObjectCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/tools/ObjectCreator.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +125,14 @@
       <option name="presentableId" value="Default" />
       <updated>1567966221731</updated>
     </task>
+    <task id="LOCAL-00001" summary="added structure for block world">
+      <created>1570268759801</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570268759801</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +149,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="added structure for block world" />
     <option name="LAST_COMMIT_MESSAGE" value="added structure for block world" />
   </component>
