@@ -6,6 +6,7 @@ import engine.entities.Entity;
 import engine.model.RawModel;
 import engine.model.loader.Loader;
 import engine.tools.Maths;
+import engine.tools.ObjectCreator;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.util.vector.Vector3f;
 import underground.render.BlockRenderer;
@@ -18,20 +19,14 @@ public class TestLoop {
 
         DisplayManager.createDisplay();
         Loader loader = new Loader();
+        ObjectCreator.setLoader(loader);
+
         BlockShader shader = new BlockShader();
         BlockRenderer renderer = new BlockRenderer(shader);
 
-        float[] vertices = {
-                0f, 0f, 0f
-        };
-
-        float[] baseColors = {
-                0f, 1f, 1f
-        };
-
-        RawModel model = loader.loadToVAO(vertices, baseColors);
-        Block block = new Block(model, null, new Vector3f(0, 0, -5));
-        block.setRotation(new Vector3f(0.5f, 0.5f, 0.5f));
+        Block test = ObjectCreator.createBlock(new Vector3f(-1, 0, -5), null);
+        Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), null);
+        Block test2 = ObjectCreator.createBlock(new Vector3f(1, 0, -5), null);
 
         Camera camera = new Camera();
 
@@ -41,7 +36,9 @@ public class TestLoop {
             renderer.prepare();
             shader.start();
             shader.viewMatrix.load(Maths.createViewMatrix(camera));
-            renderer.render(block, shader);
+            renderer.render(test1, shader);
+            renderer.render(test2, shader);
+            renderer.render(test, shader);
             shader.stop();
 
             DisplayManager.updateDisplay();

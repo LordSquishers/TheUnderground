@@ -80,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test x64">
+  <component name="RunManager" selected="Application.Windows x64">
     <configuration name="Test x64" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="underground.TestLoop" />
       <module name="TheUnderground" />

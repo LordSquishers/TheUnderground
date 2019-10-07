@@ -3,6 +3,7 @@ package underground.world;
 import engine.model.ModelTexture;
 import engine.model.RawModel;
 import org.lwjgl.util.vector.Vector3f;
+import underground.textures.BlockTexture;
 
 public class Block {
 
@@ -10,16 +11,16 @@ public class Block {
     private float scale;
 
     private RawModel model;
-    private ModelTexture[] textures;
+    private BlockTexture texture;
     private boolean[] sides;
 
     private boolean isMultiTextured;
     private boolean isEnabled;
 
-    public Block(RawModel model, ModelTexture[] textures, Vector3f position) {
+    public Block(RawModel model, BlockTexture texture, Vector3f position) {
         this.position = position;
         this.model = model;
-        this.textures = textures;
+        this.texture = texture;
 
         this.rotation = new Vector3f(0, 0, 0);
         this.scale = 1.0f;
@@ -53,20 +54,12 @@ public class Block {
         this.position = position;
     }
 
-    public ModelTexture getTexture(int side) {
-        return textures[side];
+    public BlockTexture getTexture() {
+        return texture;
     }
 
-    public ModelTexture[] getTextures() {
-        return textures;
-    }
-
-    public void setTextures(ModelTexture[] textures) {
-        this.textures = textures;
-    }
-
-    public void setTexture(ModelTexture texture, int side) {
-        this.textures[side] = texture;
+    public void setTexture(BlockTexture texture) {
+        this.texture = texture;
     }
 
     public boolean[] getSides() {

@@ -10,12 +10,24 @@ import engine.model.loader.ModelData;
 import engine.model.loader.OBJFileLoader;
 import engine.terrain.Terrain;
 import org.lwjgl.util.vector.Vector3f;
+import underground.Ref;
+import underground.textures.BlockTexture;
+import underground.world.Block;
 
 public class ObjectCreator {
 
     private static Loader loader;
 
+    private static RawModel blockModel = null;
+
     public static void setLoader(Loader loader) { ObjectCreator.loader = loader; }
+
+    private static void createBlockModel() {
+        if(blockModel == null) {
+            float[] vertex = {0f, 0f, 0f}, color = {0, 1, 1};
+            blockModel = loader.loadToVAO(vertex, color);
+        }
+    }
 
     public static Entity createEntity(String modelFile, String textureFile, Vector3f pos, Vector3f rot, float scale, EntityProperties entityProperties) {
         ModelData mdata = OBJFileLoader.loadOBJ(modelFile);
@@ -31,6 +43,19 @@ public class ObjectCreator {
 
     public static Terrain createTerrain(int gridX, int gridZ, String texturePath) {
         return new Terrain(gridX, gridZ, loader, new ModelTexture(loader.loadTexture(texturePath)));
+    }
+
+    public static Block createBlock(Vector3f position, String[] textureFiles) {
+        createBlockModel();
+        BlockTexture texture = new BlockTexture();
+
+        if(textureFiles != null) {
+            for(int i = 0; i < 6; i++) {
+                texture.setTexture(i, new ModelTexture(loader.loadTexture(textureFiles[i])));
+            }
+        }
+
+        return new Block(blockModel, texture, position);
     }
 
 }

@@ -6,7 +6,6 @@ import engine.entities.Entity;
 import engine.entities.EntityProperties;
 import engine.entities.Light;
 import engine.model.loader.Loader;
-import engine.render.EntityRenderer;
 import engine.render.MasterRenderer;
 import engine.terrain.Terrain;
 import org.lwjgl.opengl.Display;
@@ -61,13 +60,11 @@ public class GameLoop {
             // END LOGIC
 
 
-
             // RENDERING
             renderer.render();
 
             DisplayManager.updateDisplay();
             // END RENDERING
-
         }
 
         renderer.clean();

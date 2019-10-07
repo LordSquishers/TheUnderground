@@ -20,6 +20,14 @@ public class Ref {
     public static final float MOVE_MULTIPLIER = 3f;
     public static final float AMBIENCE_LIGHT_LVL = 0.15f;
 
+    // Blocks
+    public static final int TOP = 0;
+    public static final int BOTTOM = 1;
+    public static final int LEFT = 2;
+    public static final int RIGHT = 3;
+    public static final int FRONT = 4;
+    public static final int BACK = 5;
+
     // Terrain
     public static final float SIZE = 800;
     public static final int VERTEX_COUNT = 128;

@@ -1,6 +1,7 @@
 package underground.shaders.block;
 
 import engine.shaders.ShaderProgram;
+import engine.shaders.uniform.Uniform1F;
 import engine.shaders.uniform.Uniform4F;
 
 import static underground.Ref.*;

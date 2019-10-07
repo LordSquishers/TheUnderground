@@ -11,13 +11,14 @@ uniform mat4 transformMat;
 uniform mat4 projectionMat;
 uniform mat4 viewMat;
 
+const float size = 0.5;
 const vec3 lightDirection = normalize(vec3(0.75, -0.5, -0.5)); //TODO- calculate based off light and camera
 const float ambientLighting = 0.3; //TODO- use Ref
 
 void createVertex(vec3 offset, vec3 colour){
-    vec4 actualOffset = vec4(offset * 1.0, 0.0);
-    vec4 worldPosition = transformMat * gl_in[0].gl_Position + actualOffset;
-    gl_Position = projectionMat * viewMat * worldPosition;
+    vec4 actualOffset = vec4(offset * size, 0.0);
+    vec4 worldPosition = (gl_in[0].gl_Position + actualOffset);
+    gl_Position = projectionMat * viewMat * transformMat * worldPosition;
     color = colour;
     EmitVertex();
 }
