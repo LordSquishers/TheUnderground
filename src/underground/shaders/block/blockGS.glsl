@@ -70,34 +70,40 @@ void main(void) {
         EndPrimitive();
     }
 
-    // left
-    faceNormal = vec3(-1.0, 0.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(-1.0, 1.0, -1.0), colour);
-    createVertex(vec3(-1.0, -1.0, -1.0), colour);
-    createVertex(vec3(-1.0, 1.0, 1.0), colour);
-    createVertex(vec3(-1.0, -1.0, 1.0), colour);
+    if(sides[2]) {
+        // left
+        faceNormal = vec3(-1.0, 0.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // top
-    faceNormal = vec3(0.0, 1.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(1.0, 1.0, 1.0), colour);
-    createVertex(vec3(1.0, 1.0, -1.0), colour);
-    createVertex(vec3(-1.0, 1.0, 1.0), colour);
-    createVertex(vec3(-1.0, 1.0, -1.0), colour);
+    if(sides[0]) {
+        // top
+        faceNormal = vec3(0.0, 1.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // bottom
-    faceNormal = vec3(0.0, -1.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(-1.0, -1.0, 1.0), colour);
-    createVertex(vec3(-1.0, -1.0, -1.0), colour);
-    createVertex(vec3(1.0, -1.0, 1.0), colour);
-    createVertex(vec3(1.0, -1.0, -1.0), colour);
+    if(sides[1]) {
+        // bottom
+        faceNormal = vec3(0.0, -1.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
 }

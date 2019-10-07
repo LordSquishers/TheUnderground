@@ -1,7 +1,6 @@
 package underground.shaders.block;
 
 import engine.shaders.ShaderProgram;
-import engine.shaders.uniform.Uniform1F;
 import engine.shaders.uniform.Uniform4F;
 import engine.shaders.uniform.UniformBoolean;
 
@@ -34,6 +33,12 @@ public class BlockShader extends ShaderProgram {
 
         for(int i = 0; i < 6; i++) {
             enabledSides[i] = new UniformBoolean("sides[" + i + "]", programID);
+        }
+    }
+
+    public void loadSides(boolean[] sides) {
+        for(int i = 0; i < 6; i++) {
+            enabledSides[i].load(sides[i]);
         }
     }
 }

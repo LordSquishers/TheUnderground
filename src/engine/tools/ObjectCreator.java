@@ -18,7 +18,7 @@ public class ObjectCreator {
 
     private static Loader loader;
 
-    private static RawModel blockModel = null;
+    public static RawModel blockModel = null;
 
     public static void setLoader(Loader loader) { ObjectCreator.loader = loader; }
 
@@ -50,7 +50,7 @@ public class ObjectCreator {
         BlockTexture texture = new BlockTexture();
 
         if(textureFiles != null) {
-            for(int i = 0; i < 6; i++) {
+            for(int i = 0; i < textureFiles.length; i++) {
                 texture.setTexture(i, new ModelTexture(loader.loadTexture(textureFiles[i])));
             }
         }

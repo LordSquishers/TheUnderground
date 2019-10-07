@@ -10,7 +10,7 @@ out vec3 color;
 uniform mat4 transformMat;
 uniform mat4 projectionMat;
 uniform mat4 viewMat;
-uniform float sides[6];
+uniform bool sides[6];
 
 const float size = 0.5;
 const vec3 lightDirection = normalize(vec3(0.75, -0.5, -0.85)); //TODO- calculate based off light and camera
@@ -35,63 +35,75 @@ void main(void) {
     vec3 faceNormal;
     vec3 colour;
 
-    faceNormal = vec3(0.0, 0.0, 1.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(-1.0, 1.0, 1.0), colour);
-    createVertex(vec3(-1.0, -1.0, 1.0), colour);
-    createVertex(vec3(1.0, 1.0, 1.0), colour);
-    createVertex(vec3(1.0, -1.0, 1.0), colour);
+    if(sides[4]) {
+        faceNormal = vec3(0.0, 0.0, 1.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // right
-    faceNormal = vec3(1.0, 0.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(1.0, 1.0, 1.0), colour);
-    createVertex(vec3(1.0, -1.0, 1.0), colour);
-    createVertex(vec3(1.0, 1.0, -1.0), colour);
-    createVertex(vec3(1.0, -1.0, -1.0), colour);
+    if(sides[3]) {
+        // right
+        faceNormal = vec3(1.0, 0.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // back
-    faceNormal = vec3(0.0, 0.0, -1.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(1.0, 1.0, -1.0), colour);
-    createVertex(vec3(1.0, -1.0, -1.0), colour);
-    createVertex(vec3(-1.0, 1.0, -1.0), colour);
-    createVertex(vec3(-1.0, -1.0, -1.0), colour);
+    if(sides[5]) {
+        // back
+        faceNormal = vec3(0.0, 0.0, -1.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // left
-    faceNormal = vec3(-1.0, 0.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(-1.0, 1.0, -1.0), colour);
-    createVertex(vec3(-1.0, -1.0, -1.0), colour);
-    createVertex(vec3(-1.0, 1.0, 1.0), colour);
-    createVertex(vec3(-1.0, -1.0, 1.0), colour);
+    if(sides[2]) {
+        // left
+        faceNormal = vec3(-1.0, 0.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // top
-    faceNormal = vec3(0.0, 1.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(1.0, 1.0, 1.0), colour);
-    createVertex(vec3(1.0, 1.0, -1.0), colour);
-    createVertex(vec3(-1.0, 1.0, 1.0), colour);
-    createVertex(vec3(-1.0, 1.0, -1.0), colour);
+    if(sides[0]) {
+        // top
+        faceNormal = vec3(0.0, 1.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
-    // bottom
-    faceNormal = vec3(0.0, -1.0, 0.0);
-    colour = calculateLighting(faceNormal);
-    createVertex(vec3(-1.0, -1.0, 1.0), colour);
-    createVertex(vec3(-1.0, -1.0, -1.0), colour);
-    createVertex(vec3(1.0, -1.0, 1.0), colour);
-    createVertex(vec3(1.0, -1.0, -1.0), colour);
+    if(sides[1]) {
+        // bottom
+        faceNormal = vec3(0.0, -1.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
 
-    EndPrimitive();
+        EndPrimitive();
+    }
 
 }

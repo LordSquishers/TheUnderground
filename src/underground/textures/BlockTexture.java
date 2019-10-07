@@ -5,9 +5,19 @@ import engine.model.ModelTexture;
 public class BlockTexture {
 
     private ModelTexture[] textures;
+    private boolean isMultiTextured = false;
+    private boolean isTransparent = false;
 
     public BlockTexture(ModelTexture[] textures) {
         this.textures = textures;
+    }
+
+    public boolean isTransparent() {
+        return isTransparent;
+    }
+
+    public void setTransparent(boolean transparent) {
+        isTransparent = transparent;
     }
 
     public BlockTexture() {
@@ -26,7 +36,19 @@ public class BlockTexture {
         return textures;
     }
 
+    public ModelTexture getTexture() {
+        return textures[0];
+    }
+
     public void setTextures(ModelTexture[] textures) {
         this.textures = textures;
+    }
+
+    public boolean isMultiTextured() {
+        return isMultiTextured;
+    }
+
+    public void setMultiTextured(boolean multiTextured) {
+        isMultiTextured = multiTextured;
     }
 }

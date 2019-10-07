@@ -22,6 +22,8 @@ public class Block {
         this.model = model;
         this.texture = texture;
 
+        this.sides = new boolean[6];
+
         this.rotation = new Vector3f(0, 0, 0);
         this.scale = 1.0f;
     }
@@ -80,6 +82,12 @@ public class Block {
     public void setSides(boolean[] sides) {
         this.sides = sides;
         checkEnabled();
+    }
+
+    public void setAllSides(boolean value) {
+        for(int i = 0; i < 6; i++) {
+            sides[i] = value;
+        }
     }
 
     public boolean isEnabled() {
