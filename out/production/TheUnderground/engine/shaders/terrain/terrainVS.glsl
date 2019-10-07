@@ -24,7 +24,7 @@ void main() {
     vec4 worldPos = transformMat * vec4(position, 1.0);
     vec4 positionRelativeToCam = viewMat * worldPos;
     gl_Position = projectionMat * positionRelativeToCam;
-    _texCoords = texCoords * 40.0;
+    _texCoords = texCoords;
 
     surfaceNormal = (transformMat * vec4(normal, 0.0)).xyz;
     toLightVector = lightPos - worldPos.xyz;

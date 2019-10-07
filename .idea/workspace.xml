@@ -3,21 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="added structure for block world">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref$ResourceExt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref$ResourceType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref$ShaderType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/Ref.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/display/DisplayManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/display/DisplayManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/entities/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/entities/Camera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/Loader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/OBJFileLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/model/loader/OBJFileLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/EntityRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/EntityRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/MasterRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/MasterRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/TerrainRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/render/TerrainRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/entity/EntityShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/entity/EntityShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/TerrainShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/TerrainShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/terrain/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/terrain/Terrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/terrainFS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/terrainFS.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/terrainVS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/shaders/terrain/terrainVS.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/tools/ObjectCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/tools/ObjectCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/GameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/GameLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/render/BlockRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/render/BlockRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/BlockShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/BlockShader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockGS.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/tools/ObjectCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/tools/ObjectCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/TestLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/TestLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Windows x64">
+  <component name="RunManager" selected="Application.Test x64">
     <configuration name="Test x64" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="underground.TestLoop" />
       <module name="TheUnderground" />

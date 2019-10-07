@@ -10,9 +10,10 @@ out vec3 color;
 uniform mat4 transformMat;
 uniform mat4 projectionMat;
 uniform mat4 viewMat;
+uniform float sides[6];
 
 const float size = 0.5;
-const vec3 lightDirection = normalize(vec3(0.75, -0.5, -0.5)); //TODO- calculate based off light and camera
+const vec3 lightDirection = normalize(vec3(0.75, -0.5, -0.85)); //TODO- calculate based off light and camera
 const float ambientLighting = 0.3; //TODO- use Ref
 
 void createVertex(vec3 offset, vec3 colour){
@@ -30,8 +31,12 @@ vec3 calculateLighting(vec3 faceNormal){
 
 void main(void) {
 
-    vec3 faceNormal = vec3(0.0, 0.0, 1.0);
-    vec3 colour = calculateLighting(faceNormal);
+    // front
+    vec3 faceNormal;
+    vec3 colour;
+
+    faceNormal = vec3(0.0, 0.0, 1.0);
+    colour = calculateLighting(faceNormal);
     createVertex(vec3(-1.0, 1.0, 1.0), colour);
     createVertex(vec3(-1.0, -1.0, 1.0), colour);
     createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -39,6 +44,7 @@ void main(void) {
 
     EndPrimitive();
 
+    // right
     faceNormal = vec3(1.0, 0.0, 0.0);
     colour = calculateLighting(faceNormal);
     createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -48,6 +54,7 @@ void main(void) {
 
     EndPrimitive();
 
+    // back
     faceNormal = vec3(0.0, 0.0, -1.0);
     colour = calculateLighting(faceNormal);
     createVertex(vec3(1.0, 1.0, -1.0), colour);
@@ -57,6 +64,7 @@ void main(void) {
 
     EndPrimitive();
 
+    // left
     faceNormal = vec3(-1.0, 0.0, 0.0);
     colour = calculateLighting(faceNormal);
     createVertex(vec3(-1.0, 1.0, -1.0), colour);
@@ -66,6 +74,7 @@ void main(void) {
 
     EndPrimitive();
 
+    // top
     faceNormal = vec3(0.0, 1.0, 0.0);
     colour = calculateLighting(faceNormal);
     createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -75,6 +84,7 @@ void main(void) {
 
     EndPrimitive();
 
+    // bottom
     faceNormal = vec3(0.0, -1.0, 0.0);
     colour = calculateLighting(faceNormal);
     createVertex(vec3(-1.0, -1.0, 1.0), colour);

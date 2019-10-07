@@ -24,11 +24,13 @@ public class TestLoop {
         BlockShader shader = new BlockShader();
         BlockRenderer renderer = new BlockRenderer(shader);
 
-        Block test = ObjectCreator.createBlock(new Vector3f(-1, 0, -5), null);
+        Block test = ObjectCreator.createBlock(new Vector3f(-1.5f, 0, -5), null);
         Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), null);
-        Block test2 = ObjectCreator.createBlock(new Vector3f(1, 0, -5), null);
+        Block test2 = ObjectCreator.createBlock(new Vector3f(1.5f, 0, -5), null);
 
         Camera camera = new Camera();
+
+        //TODO- properly implement rendering with rest of engine
 
         while(!Display.isCloseRequested()){
             camera.move();

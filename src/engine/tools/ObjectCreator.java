@@ -24,7 +24,7 @@ public class ObjectCreator {
 
     private static void createBlockModel() {
         if(blockModel == null) {
-            float[] vertex = {0f, 0f, 0f}, color = {0, 1, 1};
+            float[] vertex = {0f, 0f, 0f}, color = {1, .82f, .86f};
             blockModel = loader.loadToVAO(vertex, color);
         }
     }
