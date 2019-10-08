@@ -39,6 +39,8 @@ public class BlockRenderer {
         Matrix4f transformationMatrix = Maths.createTransformationMatrix(block.getPosition(),
                 block.getRotation(), block.getScale());
         shader.transformMatrix.load(transformationMatrix);
+
+        shader.loadSides(block.getSides());
         GL11.glDrawArrays(GL11.GL_POINTS, 0, rawModel.getVertexCount());
         GL20.glDisableVertexAttribArray(0);
         GL20.glDisableVertexAttribArray(1);

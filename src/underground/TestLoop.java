@@ -28,6 +28,10 @@ public class TestLoop {
         Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), null);
         Block test2 = ObjectCreator.createBlock(new Vector3f(1.5f, 0, -5), null);
 
+        test.setAllSides(true);
+        test1.setAllSides(true);
+        test2.setAllSides(true);
+
         Camera camera = new Camera();
 
         //TODO- properly implement rendering with rest of engine

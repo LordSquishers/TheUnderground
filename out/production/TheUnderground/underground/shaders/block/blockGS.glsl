@@ -46,8 +46,8 @@ void main(void) {
         EndPrimitive();
     }
 
+    // right
     if(sides[3]) {
-        // right
         faceNormal = vec3(1.0, 0.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -58,8 +58,8 @@ void main(void) {
         EndPrimitive();
     }
 
+    // back
     if(sides[5]) {
-        // back
         faceNormal = vec3(0.0, 0.0, -1.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(1.0, 1.0, -1.0), colour);
@@ -70,8 +70,8 @@ void main(void) {
         EndPrimitive();
     }
 
+    // left
     if(sides[2]) {
-        // left
         faceNormal = vec3(-1.0, 0.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(-1.0, 1.0, -1.0), colour);
@@ -82,8 +82,8 @@ void main(void) {
         EndPrimitive();
     }
 
+    // top
     if(sides[0]) {
-        // top
         faceNormal = vec3(0.0, 1.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -94,8 +94,8 @@ void main(void) {
         EndPrimitive();
     }
 
+    // bottom
     if(sides[1]) {
-        // bottom
         faceNormal = vec3(0.0, -1.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(-1.0, -1.0, 1.0), colour);
