@@ -33,6 +33,7 @@ void createVertex(vec3 offset, vec3 normal){
 
 void main(void) {
 
+<<<<<<< HEAD
   // front
   vec3 faceNormal;
 
@@ -101,3 +102,81 @@ void main(void) {
       EndPrimitive();
   }
 }
+=======
+    // front
+    vec3 faceNormal;
+    vec3 colour;
+
+    if(sides[4]) {
+        faceNormal = vec3(0.0, 0.0, 1.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
+
+        EndPrimitive();
+    }
+
+    if(sides[3]) {
+        // right
+        faceNormal = vec3(1.0, 0.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
+
+        EndPrimitive();
+    }
+
+    if(sides[5]) {
+        // back
+        faceNormal = vec3(0.0, 0.0, -1.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+
+        EndPrimitive();
+    }
+
+    if(sides[2]) {
+        // left
+        faceNormal = vec3(-1.0, 0.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
+
+        EndPrimitive();
+    }
+
+    if(sides[0]) {
+        // top
+        faceNormal = vec3(0.0, 1.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(1.0, 1.0, 1.0), colour);
+        createVertex(vec3(1.0, 1.0, -1.0), colour);
+        createVertex(vec3(-1.0, 1.0, 1.0), colour);
+        createVertex(vec3(-1.0, 1.0, -1.0), colour);
+
+        EndPrimitive();
+    }
+
+    if(sides[1]) {
+        // bottom
+        faceNormal = vec3(0.0, -1.0, 0.0);
+        colour = calculateLighting(faceNormal);
+        createVertex(vec3(-1.0, -1.0, 1.0), colour);
+        createVertex(vec3(-1.0, -1.0, -1.0), colour);
+        createVertex(vec3(1.0, -1.0, 1.0), colour);
+        createVertex(vec3(1.0, -1.0, -1.0), colour);
+
+        EndPrimitive();
+    }
+
+}
+>>>>>>> parent of 214a626... fixed rendering
