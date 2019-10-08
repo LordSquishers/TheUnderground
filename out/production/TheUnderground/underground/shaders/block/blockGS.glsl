@@ -31,84 +31,11 @@ vec3 calculateLighting(vec3 faceNormal){
 
 void main(void) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // front
-  vec3 faceNormal;
-
-  if(sides[4]) {
-      faceNormal = vec3(0.0, 0.0, 1.0);
-      createVertex(vec3(-1.0, 1.0, 1.0), faceNormal);
-      createVertex(vec3(-1.0, -1.0, 1.0), faceNormal);
-      createVertex(vec3(1.0, 1.0, 1.0), faceNormal);
-      createVertex(vec3(1.0, -1.0, 1.0), faceNormal);
-
-      EndPrimitive();
-  }
-
-  // right
-  if(sides[3]) {
-      faceNormal = vec3(1.0, 0.0, 0.0);
-      createVertex(vec3(1.0, 1.0, 1.0), faceNormal);
-      createVertex(vec3(1.0, -1.0, 1.0), faceNormal);
-      createVertex(vec3(1.0, 1.0, -1.0), faceNormal);
-      createVertex(vec3(1.0, -1.0, -1.0), faceNormal);
-
-      EndPrimitive();
-  }
-
-  // back
-  if(sides[5]) {
-      faceNormal = vec3(0.0, 0.0, -1.0);
-      createVertex(vec3(1.0, 1.0, -1.0), faceNormal);
-      createVertex(vec3(1.0, -1.0, -1.0), faceNormal);
-      createVertex(vec3(-1.0, 1.0, -1.0), faceNormal);
-      createVertex(vec3(-1.0, -1.0, -1.0), faceNormal);
-
-      EndPrimitive();
-  }
-
-  // left
-  if(sides[2]) {
-      faceNormal = vec3(-1.0, 0.0, 0.0);
-      createVertex(vec3(-1.0, 1.0, -1.0), faceNormal);
-      createVertex(vec3(-1.0, -1.0, -1.0), faceNormal);
-      createVertex(vec3(-1.0, 1.0, 1.0), faceNormal);
-      createVertex(vec3(-1.0, -1.0, 1.0), faceNormal);
-
-      EndPrimitive();
-  }
-
-  // top
-  if(sides[0]) {
-      faceNormal = vec3(0.0, 1.0, 0.0);
-      createVertex(vec3(1.0, 1.0, 1.0), faceNormal);
-      createVertex(vec3(1.0, 1.0, -1.0), faceNormal);
-      createVertex(vec3(-1.0, 1.0, 1.0), faceNormal);
-      createVertex(vec3(-1.0, 1.0, -1.0), faceNormal);
-
-      EndPrimitive();
-  }
-
-  // bottom
-  if(sides[1]) {
-      faceNormal = vec3(0.0, -1.0, 0.0);
-      createVertex(vec3(-1.0, -1.0, 1.0), faceNormal);
-      createVertex(vec3(-1.0, -1.0, -1.0), faceNormal);
-      createVertex(vec3(1.0, -1.0, 1.0), faceNormal);
-      createVertex(vec3(1.0, -1.0, -1.0), faceNormal);
-
-      EndPrimitive();
-  }
-}
-=======
-=======
->>>>>>> parent of 0e07589... working on rendering
     // front
     vec3 faceNormal;
     vec3 colour;
 
-    if(sides[4]) {
+    if (sides[4]) {
         faceNormal = vec3(0.0, 0.0, 1.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(-1.0, 1.0, 1.0), colour);
@@ -119,13 +46,8 @@ void main(void) {
         EndPrimitive();
     }
 
-<<<<<<< HEAD
-    if(sides[3]) {
-        // right
-=======
     // right
-    if(sides[3]) {
->>>>>>> parent of 0e07589... working on rendering
+    if (sides[3]) {
         faceNormal = vec3(1.0, 0.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -135,14 +57,8 @@ void main(void) {
 
         EndPrimitive();
     }
-
-<<<<<<< HEAD
-    if(sides[5]) {
-        // back
-=======
     // back
-    if(sides[5]) {
->>>>>>> parent of 0e07589... working on rendering
+    if (sides[5]) {
         faceNormal = vec3(0.0, 0.0, -1.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(1.0, 1.0, -1.0), colour);
@@ -153,13 +69,8 @@ void main(void) {
         EndPrimitive();
     }
 
-<<<<<<< HEAD
-    if(sides[2]) {
-        // left
-=======
     // left
-    if(sides[2]) {
->>>>>>> parent of 0e07589... working on rendering
+    if (sides[2]) {
         faceNormal = vec3(-1.0, 0.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(-1.0, 1.0, -1.0), colour);
@@ -170,13 +81,8 @@ void main(void) {
         EndPrimitive();
     }
 
-<<<<<<< HEAD
-    if(sides[0]) {
-        // top
-=======
     // top
-    if(sides[0]) {
->>>>>>> parent of 0e07589... working on rendering
+    if (sides[0]) {
         faceNormal = vec3(0.0, 1.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(1.0, 1.0, 1.0), colour);
@@ -187,13 +93,8 @@ void main(void) {
         EndPrimitive();
     }
 
-<<<<<<< HEAD
-    if(sides[1]) {
-        // bottom
-=======
     // bottom
-    if(sides[1]) {
->>>>>>> parent of 0e07589... working on rendering
+    if (sides[1]) {
         faceNormal = vec3(0.0, -1.0, 0.0);
         colour = calculateLighting(faceNormal);
         createVertex(vec3(-1.0, -1.0, 1.0), colour);
@@ -203,10 +104,4 @@ void main(void) {
 
         EndPrimitive();
     }
-
-<<<<<<< HEAD
 }
->>>>>>> parent of 214a626... fixed rendering
-=======
-}
->>>>>>> parent of 0e07589... working on rendering
