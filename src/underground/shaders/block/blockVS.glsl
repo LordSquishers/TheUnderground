@@ -1,6 +1,7 @@
 #version 150
 
 in vec3 position;
+<<<<<<< HEAD
 in vec2 texCoords;
 
 out vec2 _texCoords;
@@ -33,3 +34,13 @@ void main(void) {
   visibility = clamp(visibility, 0.0, 1.0);
 
 }
+=======
+in vec3 color;
+
+out vec3 baseColor;
+
+void main(void) {
+    gl_Position = vec4(position, 1.0);
+    baseColor = color;
+}
+>>>>>>> parent of 0e07589... working on rendering

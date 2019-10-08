@@ -1,5 +1,6 @@
 #version 150
 
+<<<<<<< HEAD
 in vec2 _texCoords;
 in vec3 surfaceNormal;
 in vec3 toLightVector;
@@ -41,3 +42,14 @@ void main(void) {
   _color = mix(vec4(skyColor, 1.0), _color, visibility);
 
 }
+=======
+out vec4 _color;
+
+in vec3 color;
+
+void main(void){
+
+    _color = vec4(color, 1.0);
+
+}
+>>>>>>> parent of 0e07589... working on rendering
