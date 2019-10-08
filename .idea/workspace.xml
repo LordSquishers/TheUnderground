@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="implementing block rendering">
+    <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="fixed rendering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/render/BlockRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/render/BlockRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/BlockShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/BlockShader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockFS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockFS.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockGS.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/TestLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/TestLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockVS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockVS.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockFS.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockVS.glsl" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,18 +48,19 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/underground/shaders/block" />
+      <recent name="B:\Programming\TheUnderground\res\models" />
+      <recent name="B:\Programming\TheUnderground\lib" />
+      <recent name="B:\Programming\TheUnderground\src" />
+      <recent name="B:\Programming\TheUnderground\res\textures" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="B:\Programming\TheUnderground\src\engine\shaders\terrain" />
       <recent name="B:\Programming\TheUnderground\src\engine\model\loader" />
       <recent name="B:\Programming\TheUnderground\lib\natives" />
       <recent name="B:\Programming\TheUnderground\lib" />
       <recent name="B:\Programming\TheUnderground\src\engine\shaders" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="B:\Programming\TheUnderground\res\models" />
-      <recent name="B:\Programming\TheUnderground\lib" />
-      <recent name="B:\Programming\TheUnderground\src" />
-      <recent name="B:\Programming\TheUnderground\res\textures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570471223004</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed rendering">
+      <created>1570524727386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570524727386</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +173,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="added structure for block world" />
     <MESSAGE value="implementing block rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing block rendering" />
+    <MESSAGE value="fixed rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed rendering" />
   </component>
 </project>
