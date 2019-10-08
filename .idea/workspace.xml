@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="fixed rendering">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/BlockShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/BlockShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockFS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockFS.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockGS.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockVS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/shaders/block/blockVS.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockFS.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockVS.glsl" beforeDir="false" />
-    </list>
+    <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="working on rendering" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570524727386</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="working on rendering">
+      <created>1570551162213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570551162213</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +170,7 @@
     <MESSAGE value="added structure for block world" />
     <MESSAGE value="implementing block rendering" />
     <MESSAGE value="fixed rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed rendering" />
+    <MESSAGE value="working on rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on rendering" />
   </component>
 </project>
