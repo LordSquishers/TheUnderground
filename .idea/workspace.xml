@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="working on rendering" />
+    <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="included the excluded">
+      <change afterPath="$PROJECT_DIR$/src/underground/render/MasterRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/TestLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/TestLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570551162213</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="included the excluded">
+      <created>1570553184256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570553184256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +185,7 @@
     <MESSAGE value="implementing block rendering" />
     <MESSAGE value="fixed rendering" />
     <MESSAGE value="working on rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on rendering" />
+    <MESSAGE value="included the excluded" />
+    <option name="LAST_COMMIT_MESSAGE" value="included the excluded" />
   </component>
 </project>

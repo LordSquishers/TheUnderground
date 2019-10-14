@@ -12,9 +12,10 @@ uniform mat4 projectionMat;
 uniform mat4 viewMat;
 uniform bool sides[6];
 
+uniform float ambientLighting;
+
 const float size = 0.5;
 const vec3 lightDirection = normalize(vec3(0.75, -0.5, -0.85)); //TODO- calculate based off light and camera
-const float ambientLighting = 0.3; //TODO- use Ref
 
 void createVertex(vec3 offset, vec3 colour){
     vec4 actualOffset = vec4(offset * size, 0.0);

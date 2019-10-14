@@ -1,6 +1,7 @@
 package underground.shaders.block;
 
 import engine.shaders.ShaderProgram;
+import engine.shaders.uniform.Uniform1F;
 import engine.shaders.uniform.Uniform4F;
 import engine.shaders.uniform.UniformBoolean;
 
@@ -9,6 +10,7 @@ import static underground.Ref.*;
 public class BlockShader extends ShaderProgram {
 
     public Uniform4F projectionMatrix, viewMatrix, transformMatrix;
+    public Uniform1F ambientLighting;
     public UniformBoolean[] enabledSides;
 
     public BlockShader() {
@@ -29,8 +31,9 @@ public class BlockShader extends ShaderProgram {
         viewMatrix = new Uniform4F("viewMat", programID);
         transformMatrix = new Uniform4F("transformMat", programID);
 
-        enabledSides = new UniformBoolean[6];
+        ambientLighting = new Uniform1F("ambientLighting", programID);
 
+        enabledSides = new UniformBoolean[6];
         for(int i = 0; i < 6; i++) {
             enabledSides[i] = new UniformBoolean("sides[" + i + "]", programID);
         }
