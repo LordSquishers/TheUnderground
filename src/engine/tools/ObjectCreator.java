@@ -45,7 +45,7 @@ public class ObjectCreator {
         return new Terrain(gridX, gridZ, loader, new ModelTexture(loader.loadTexture(texturePath)));
     }
 
-    public static Block createBlock(Vector3f position, String[] textureFiles) {
+    public static Block createBlock(Vector3f position, String[] textureFiles, int id) {
         createBlockModel();
         BlockTexture texture = new BlockTexture();
 

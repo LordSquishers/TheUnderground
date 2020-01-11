@@ -84,10 +84,12 @@ public class Block {
         checkEnabled();
     }
 
-    public void setAllSides(boolean value) {
+    public Block setAllSides(boolean value) {
         for(int i = 0; i < 6; i++) {
             sides[i] = value;
         }
+
+        return this;
     }
 
     public boolean isEnabled() {

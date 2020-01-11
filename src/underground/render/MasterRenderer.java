@@ -7,6 +7,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import underground.shaders.block.BlockShader;
 import underground.world.Block;
+import underground.world.Chunk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,24 +19,31 @@ public class MasterRenderer {
     private BlockRenderer blockRenderer;
     private BlockShader blockShader = new BlockShader();
 
+    private ChunkRenderer chunkRenderer;
+
     private Camera camera;
     private Light mainLight;
 
     private Matrix4f projectionMatrix;
 
     private List<Block> blocks = new ArrayList<>();
+    private List<Chunk> chunks = new ArrayList<>();
 
     public MasterRenderer(Camera camera, Light mainLight) {
         createProjectionMatrix();
 
         this.camera = camera;
         this.mainLight = mainLight;
+
         blockRenderer = new BlockRenderer(blockShader);
+        chunkRenderer = new ChunkRenderer();
     }
 
     public void addBlock(Block block) { this.blocks.add(block); }
 
     public void addBlocks(List<Block> blocks) { this.blocks.addAll(blocks); }
+
+    public void addChunks(List<Chunk> chunks) { this.chunks.addAll(chunks); }
 
     private void prepare() {
         GL11.glEnable(GL11.GL_DEPTH_TEST);
@@ -46,6 +54,7 @@ public class MasterRenderer {
     public void render() {
         prepare();
 
+        blocks.addAll(chunkRenderer.createBlockListFromChunks(chunks));
         renderBlocks();
     }
 
@@ -60,6 +69,7 @@ public class MasterRenderer {
         blockShader.stop();
 
         blocks.clear();
+        chunks.clear();
     }
 
     public void clean() {

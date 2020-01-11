@@ -14,6 +14,7 @@ import underground.render.BlockRenderer;
 import underground.render.MasterRenderer;
 import underground.shaders.block.BlockShader;
 import underground.world.Block;
+import underground.world.Chunk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,10 +28,11 @@ public class TestLoop {
         ObjectCreator.setLoader(loader);
 
         List<Block> blocks = new ArrayList<>();
+        List<Chunk> chunks = new ArrayList<>();
 
-        Block test = ObjectCreator.createBlock(new Vector3f(-1.5f, 0, -5), null);
-        Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), null);
-        Block test2 = ObjectCreator.createBlock(new Vector3f(1.5f, 0, -5), null);
+        Block test = ObjectCreator.createBlock(new Vector3f(-1.5f, 0, -5), null, 1);
+        Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), null, 1);
+        Block test2 = ObjectCreator.createBlock(new Vector3f(1.5f, 0, -5), null, 1);
 
         test.setAllSides(true);
         test1.setAllSides(true);
@@ -44,12 +46,18 @@ public class TestLoop {
         Light light = new Light(new Vector3f(0, 20, 200), new Vector3f(1, 1, 1));
         MasterRenderer renderer = new MasterRenderer(camera, light);
 
+        Chunk chunk1 = new Chunk(new Vector3f(0, 0, -10));
+        chunk1.setAllBlocks(1);
+        chunks.add(chunk1);
+
         //TODO- properly implement rendering with rest of engine
 
         while(!Display.isCloseRequested()){
             camera.move();
 
             renderer.addBlocks(blocks);
+            renderer.addChunks(chunks);
+
             renderer.render();
 
             DisplayManager.updateDisplay();

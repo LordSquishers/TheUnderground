@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28709d67-60c3-4c5d-a5d4-2b63bd540c3d" name="Default" comment="included the excluded">
-      <change afterPath="$PROJECT_DIR$/src/underground/render/MasterRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/underground/render/ChunkRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/META-INF/TheUnderground.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/META-INF/TheUnderground.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/engine/tools/ObjectCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/engine/tools/ObjectCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref$ResourceExt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref$ResourceExt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref$ResourceType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref$ResourceType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref$ShaderType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref$ShaderType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/Ref.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/TestLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/world/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/world/Block.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheUnderground/underground/world/Chunk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheUnderground/underground/world/Chunk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/tools/ObjectCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/tools/ObjectCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/Ref.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/Ref.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/underground/TestLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/TestLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/render/BlockRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/BlockShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/shaders/block/blockGS.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/render/MasterRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/render/MasterRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/world/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/world/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/underground/world/Chunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/underground/world/Chunk.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,13 +46,19 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/engine/shaders/terrain" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,20 +76,10 @@
       <recent name="B:\Programming\TheUnderground\src\engine\shaders" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.Test x64">
     <configuration name="Test x64" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="underground.TestLoop" />
       <module name="TheUnderground" />
       <option name="VM_PARAMETERS" value="-Djava.library.path=lib/natives/" />
@@ -81,7 +88,7 @@
       </method>
     </configuration>
     <configuration name="Windows x64" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="11.0.3" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="underground.GameLoop" />
       <module name="TheUnderground" />
@@ -113,9 +120,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Windows x64" />
       <item itemvalue="Application.Test x64" />
+      <item itemvalue="Application.Windows x64" />
     </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -187,5 +206,47 @@
     <MESSAGE value="working on rendering" />
     <MESSAGE value="included the excluded" />
     <option name="LAST_COMMIT_MESSAGE" value="included the excluded" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578665133505">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1578665133505" />
+    <state x="320" y="117" key="#com.intellij.ide.actionMacro.EditMacrosDialog" timestamp="1578665576644">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="117" key="#com.intellij.ide.actionMacro.EditMacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1578665576644" />
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1578752245606">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1578752245606" />
+    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578665149147">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1578665149147" />
+    <state width="1398" height="128" key="GridCell.Tab.0.bottom" timestamp="1578754755294">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="128" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578754755294" />
+    <state width="1398" height="128" key="GridCell.Tab.0.center" timestamp="1578754755293">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="128" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578754755293" />
+    <state width="1398" height="128" key="GridCell.Tab.0.left" timestamp="1578754755292">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="128" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578754755292" />
+    <state width="1398" height="128" key="GridCell.Tab.0.right" timestamp="1578754755293">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="128" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578754755293" />
+    <state x="477" y="167" key="RollbackChangesDialog" timestamp="1578666618267">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="477" y="167" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1578666618267" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1578665610060">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578665610060" />
   </component>
 </project>
