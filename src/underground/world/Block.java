@@ -1,6 +1,5 @@
 package underground.world;
 
-import engine.model.ModelTexture;
 import engine.model.RawModel;
 import org.lwjgl.util.vector.Vector3f;
 import underground.textures.BlockTexture;

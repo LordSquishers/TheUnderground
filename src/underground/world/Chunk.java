@@ -7,6 +7,7 @@ public class Chunk {
 
     private int[][][] blocks;
     private Vector3f position;
+    private boolean[] enabledSides = {true, true, true, true, true, true};
     private boolean isVisible = true;
 
     public Chunk(Vector3f position) {
@@ -14,7 +15,7 @@ public class Chunk {
         this.blocks = new int[Ref.CHUNK_SIZE][Ref.CHUNK_SIZE][Ref.CHUNK_SIZE];
     }
 
-    public void setAllBlocks(int id) {
+    public Chunk setAllBlocks(int id) {
         for (int x = 0; x < Ref.CHUNK_SIZE; x++) {
             for (int y = 0; y < Ref.CHUNK_SIZE; y++) {
                 for (int z = 0; z < Ref.CHUNK_SIZE; z++) {
@@ -22,6 +23,20 @@ public class Chunk {
                 }
             }
         }
+
+        return this;
+    }
+
+    public void setEnabledSides(boolean[] enabledSides) {
+        this.enabledSides = enabledSides;
+    }
+
+    public boolean[] getEnabledSides() {
+        return enabledSides;
+    }
+
+    public void setChunkSide(int side, boolean isEnabled) {
+        enabledSides[side] = isEnabled;
     }
 
     public void setBlocks(int[][][] blocks) {

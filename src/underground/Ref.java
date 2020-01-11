@@ -7,9 +7,9 @@ public class Ref {
     public static final String WINDOW_TITLE = "The Underground";
     public static final int WINDOW_FPS = 120;
 
-    public static float SKY_COLOR_R = 0.8f;
-    public static float SKY_COLOR_G = 0.8f;
-    public static float SKY_COLOR_B = 0.8f;
+    public static final float SKY_COLOR_R = 0.8f;
+    public static final float SKY_COLOR_G = 0.8f;
+    public static final float SKY_COLOR_B = 0.8f;
 
     // Rendering
     public static final float FOV = 70;
@@ -34,6 +34,7 @@ public class Ref {
 
     // Chunks
     public static final int CHUNK_SIZE = 8;
+    public static final int MAP_SIZE = 10;
 
     // Shaders
     public static final int VERTEX_FILE = 0;

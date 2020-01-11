@@ -17,11 +17,9 @@ import static underground.Ref.*;
 public class TerrainRenderer {
 
     private TerrainShader terrainShader;
-    private Matrix4f projectionMatrix;
 
     public TerrainRenderer(TerrainShader terrainShader, Matrix4f projectionMatrix) {
         this.terrainShader = terrainShader;
-        this.projectionMatrix = projectionMatrix;
 
         terrainShader.start();
         terrainShader.projectionMatrix.load(projectionMatrix);

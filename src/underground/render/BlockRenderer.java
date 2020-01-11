@@ -1,22 +1,15 @@
 package underground.render;
 
-import engine.entities.Entity;
 import engine.model.RawModel;
 import engine.tools.Maths;
-import engine.tools.ObjectCreator;
-import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.util.vector.Matrix4f;
-import underground.Ref;
-import underground.block.BlockIDs;
 import underground.shaders.block.BlockShader;
 import underground.world.Block;
 
 import java.util.List;
-
-import static underground.Ref.*;
 
 public class BlockRenderer {
 

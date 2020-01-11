@@ -8,6 +8,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import underground.shaders.block.BlockShader;
 import underground.world.Block;
 import underground.world.Chunk;
+import underground.world.Map;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,18 +23,16 @@ public class MasterRenderer {
     private ChunkRenderer chunkRenderer;
 
     private Camera camera;
-    private Light mainLight;
 
     private Matrix4f projectionMatrix;
 
     private List<Block> blocks = new ArrayList<>();
-    private List<Chunk> chunks = new ArrayList<>();
+    private Map map;
 
     public MasterRenderer(Camera camera, Light mainLight) {
         createProjectionMatrix();
 
         this.camera = camera;
-        this.mainLight = mainLight;
 
         blockRenderer = new BlockRenderer(blockShader);
         chunkRenderer = new ChunkRenderer();
@@ -43,7 +42,7 @@ public class MasterRenderer {
 
     public void addBlocks(List<Block> blocks) { this.blocks.addAll(blocks); }
 
-    public void addChunks(List<Chunk> chunks) { this.chunks.addAll(chunks); }
+    public void setMap(Map map) { this.map = map; }
 
     private void prepare() {
         GL11.glEnable(GL11.GL_DEPTH_TEST);
@@ -54,7 +53,7 @@ public class MasterRenderer {
     public void render() {
         prepare();
 
-        blocks.addAll(chunkRenderer.createBlockListFromChunks(chunks));
+        blocks.addAll(chunkRenderer.createBlockListFromChunks(map.getPosition(), map.getChunks()));
         renderBlocks();
     }
 
@@ -69,7 +68,6 @@ public class MasterRenderer {
         blockShader.stop();
 
         blocks.clear();
-        chunks.clear();
     }
 
     public void clean() {
@@ -90,4 +88,5 @@ public class MasterRenderer {
         projectionMatrix.m32 = -((2 * NEAR_PLANE * FAR_PLANE) / frustumLength);
         projectionMatrix.m33 = 0;
     }
+
 }

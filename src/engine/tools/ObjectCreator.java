@@ -10,7 +10,6 @@ import engine.model.loader.ModelData;
 import engine.model.loader.OBJFileLoader;
 import engine.terrain.Terrain;
 import org.lwjgl.util.vector.Vector3f;
-import underground.Ref;
 import underground.block.BlockIDs;
 import underground.textures.BlockTexture;
 import underground.world.Block;
