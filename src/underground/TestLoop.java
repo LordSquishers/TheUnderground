@@ -8,12 +8,8 @@ import engine.tools.ObjectCreator;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.util.vector.Vector3f;
 import underground.render.MasterRenderer;
-import underground.world.Block;
 import underground.world.Chunk;
 import underground.world.Map;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TestLoop {
 

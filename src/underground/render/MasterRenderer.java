@@ -7,7 +7,6 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import underground.shaders.block.BlockShader;
 import underground.world.Block;
-import underground.world.Chunk;
 import underground.world.Map;
 
 import java.util.ArrayList;

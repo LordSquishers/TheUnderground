@@ -1,8 +1,6 @@
 package engine.entities;
 
-import org.lwjgl.input.Mouse;
 import org.lwjgl.util.vector.Vector3f;
-import underground.Ref;
 
 import static org.lwjgl.input.Keyboard.*;
 import static underground.Ref.*;
