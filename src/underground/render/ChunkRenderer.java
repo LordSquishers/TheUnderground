@@ -29,8 +29,9 @@ public class ChunkRenderer {
             for (int y = 0; y < Ref.CHUNK_SIZE; y++) {
                 for (int z = 0; z < Ref.CHUNK_SIZE; z++) {
                     if(ids[x][y][z] > 0) {
-                        Block newBlock = ObjectCreator.createBlock(new Vector3f(x + chunkPos.x, y + chunkPos.y, z + chunkPos.z), null, ids[x][y][z])
-                                .setAllSides(true);
+                        Block newBlock = ObjectCreator.createBlock(new Vector3f(x + chunkPos.x, y + chunkPos.y, z + chunkPos.z),
+                                ids[x][y][z]).setAllSides(true);
+
 
                         if(x > 0 && ids[x - 1][y][z] > 0) { // left of block
                             newBlock.setSide(Ref.LEFT, false);

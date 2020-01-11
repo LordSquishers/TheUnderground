@@ -89,6 +89,7 @@ public class Block {
             sides[i] = value;
         }
 
+        checkEnabled();
         return this;
     }
 

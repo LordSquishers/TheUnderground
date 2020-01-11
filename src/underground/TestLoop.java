@@ -10,6 +10,7 @@ import engine.tools.Maths;
 import engine.tools.ObjectCreator;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.util.vector.Vector3f;
+import underground.block.BlockIDs;
 import underground.render.BlockRenderer;
 import underground.render.MasterRenderer;
 import underground.shaders.block.BlockShader;
@@ -30,9 +31,9 @@ public class TestLoop {
         List<Block> blocks = new ArrayList<>();
         List<Chunk> chunks = new ArrayList<>();
 
-        Block test = ObjectCreator.createBlock(new Vector3f(-1.5f, 0, -5), null, 1);
-        Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), null, 1);
-        Block test2 = ObjectCreator.createBlock(new Vector3f(1.5f, 0, -5), null, 1);
+        Block test = ObjectCreator.createBlock(new Vector3f(-1.5f, 0, -5), 1);
+        Block test1 = ObjectCreator.createBlock(new Vector3f(0, 0, -5), 1);
+        Block test2 = ObjectCreator.createBlock(new Vector3f(1.5f, 0, -5), 1);
 
         test.setAllSides(true);
         test1.setAllSides(true);
@@ -48,6 +49,14 @@ public class TestLoop {
 
         Chunk chunk1 = new Chunk(new Vector3f(0, 0, -10));
         chunk1.setAllBlocks(1);
+        chunk1.setBlockAt(2, 0, 0, 7);
+        chunk1.setBlockAt(2, 1, 0, 7);
+        chunk1.setBlockAt(2, 2, 0, 7);
+        chunk1.setBlockAt(2, 3, 0, 7);
+        chunk1.setBlockAt(0, 2, 4, 7);
+        chunk1.setBlockAt(0, 3, 4, 7);
+        chunk1.setBlockAt(0, 4, 4, 7);
+        chunk1.setBlockAt(0, 5, 4, 7);
         chunks.add(chunk1);
 
         //TODO- properly implement rendering with rest of engine
@@ -55,7 +64,7 @@ public class TestLoop {
         while(!Display.isCloseRequested()){
             camera.move();
 
-            renderer.addBlocks(blocks);
+            //renderer.addBlocks(blocks);
             renderer.addChunks(chunks);
 
             renderer.render();

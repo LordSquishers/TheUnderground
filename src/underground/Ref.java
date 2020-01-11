@@ -33,7 +33,7 @@ public class Ref {
     public static final int VERTEX_COUNT = 128;
 
     // Chunks
-    public static final int CHUNK_SIZE = 4;
+    public static final int CHUNK_SIZE = 8;
 
     // Shaders
     public static final int VERTEX_FILE = 0;

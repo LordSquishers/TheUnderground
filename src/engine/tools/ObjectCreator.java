@@ -11,22 +11,26 @@ import engine.model.loader.OBJFileLoader;
 import engine.terrain.Terrain;
 import org.lwjgl.util.vector.Vector3f;
 import underground.Ref;
+import underground.block.BlockIDs;
 import underground.textures.BlockTexture;
 import underground.world.Block;
 
 public class ObjectCreator {
 
     private static Loader loader;
-
-    public static RawModel blockModel = null;
-
     public static void setLoader(Loader loader) { ObjectCreator.loader = loader; }
 
-    private static void createBlockModel() {
-        if(blockModel == null) {
-            float[] vertex = {0f, 0f, 0f}, color = {1, .82f, .86f};
-            blockModel = loader.loadToVAO(vertex, color);
-        }
+    private static RawModel createBlockModel(int id) {
+        return BlockIDs.getBlockModel(id);
+    }
+
+    public static RawModel createBlockModel(Vector3f colors) {
+        RawModel model;
+
+        float[] vertex = {0f, 0f, 0f}, color = {colors.x, colors.y, colors.z};
+        model = loader.loadToVAO(vertex, color);
+
+        return model;
     }
 
     public static Entity createEntity(String modelFile, String textureFile, Vector3f pos, Vector3f rot, float scale, EntityProperties entityProperties) {
@@ -45,17 +49,17 @@ public class ObjectCreator {
         return new Terrain(gridX, gridZ, loader, new ModelTexture(loader.loadTexture(texturePath)));
     }
 
-    public static Block createBlock(Vector3f position, String[] textureFiles, int id) {
-        createBlockModel();
+    public static Block createBlock(Vector3f position, int id) {
+        RawModel model = createBlockModel(id);
         BlockTexture texture = new BlockTexture();
 
-        if(textureFiles != null) {
+        /*if(textureFiles != null) {
             for(int i = 0; i < textureFiles.length; i++) {
                 texture.setTexture(i, new ModelTexture(loader.loadTexture(textureFiles[i])));
             }
-        }
+        }*/
 
-        return new Block(blockModel, texture, position);
+        return new Block(model, texture, position);
     }
 
 }
